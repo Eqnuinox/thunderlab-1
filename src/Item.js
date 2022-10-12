@@ -2,6 +2,7 @@ import React from "react";
 
 
 const Item = ({
+  index,
   trackName,
   artistName,
   collectionName,
@@ -13,9 +14,10 @@ const Item = ({
 }) => (
   <a href={collectionViewUrl} target="_blank">
     <div>
-      <div>{collectionName}</div>
-      <div>{artistName}</div>
-      <div>{releaseDate}</div>
+      <div>{index}1</div>
+      <div>{collectionName}1</div>
+      <div>{artistName}2</div>
+      <div>{releaseDate}2</div>
       <div>{primaryGenreName}</div>
       <div>{trackName}</div>
       <div>{albumName}</div>

@@ -1,37 +1,56 @@
-import React from "react";
+import { render } from "@testing-library/react";
+import React, {useState} from "react";
 
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchSongProps: ""
-    };
-  }
 
-  handleSearchChange = (event) =>
-    this.setState({ searchSongProps: event.target.value });
-    
-  render() {
-    const { startSearch } = this.props;
-    const { searchSongProps } = this.state;
+export default function Header({onChange}){
+
+
+    const handleSearchChange = (event) =>{
+       onChange(event.target.value);
+    }
+
+    // const handleSearchClick = (event) =>{
+    //    onClick(searchValue);
+    // }
+
+
+
+
+
+    // const { searchSongProps } = this.state;
 
     return (
       <div>
         <div>
           <input
             type=""
-            value={searchSongProps}
             placeholder="Search..."
-            onChange={this.handleSearchChange}
+            onChange={handleSearchChange}
           />
-          <button onClick={() => startSearch(searchSongProps)}>
-            <i>search</i>
-          </button>
+          <script></script>
         </div>
       </div>
-    );
-  }
-}
+    )
+    }
 
-export default Header;
+
+// class Header extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       searchSongProps: ""
+//     };
+//   }
+
+//   handleSearchChange = (event) =>
+//     this.setState({ searchSongProps: event.target.value });
+    
+//   render() {
+//     const { startSearch } = this.props;
+//     const { searchSongProps } = this.state;
+
+
+//   }
+// }
+
